@@ -1,5 +1,5 @@
 # whif
-**공개 SW 개발자**
+**공개 SW 개발자 공모전**  
 iOS 모바일 신분증 whif
 
 ## Swift build
