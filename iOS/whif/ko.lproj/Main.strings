@@ -1,0 +1,198 @@
+
+/* Class = "UIButton"; normalTitle = "시작하기"; ObjectID = "1F9-9B-zOn"; */
+"1F9-9B-zOn.normalTitle" = "시작하기";
+
+/* Class = "UIButton"; normalTitle = "확인"; ObjectID = "1q5-hF-LLF"; */
+"1q5-hF-LLF.normalTitle" = "확인";
+
+/* Class = "UIButton"; normalTitle = "인증번호 받기"; ObjectID = "4U7-ah-zOV"; */
+"4U7-ah-zOV.normalTitle" = "인증번호 받기";
+
+/* Class = "UIButton"; normalTitle = "모두 동의"; ObjectID = "5Yt-nH-Kgp"; */
+"5Yt-nH-Kgp.normalTitle" = "모두 동의";
+
+/* Class = "UILabel"; text = "QR코드 스캔하기"; ObjectID = "5lx-AP-igA"; */
+"5lx-AP-igA.text" = "QR코드 스캔하기";
+
+/* Class = "UILabel"; text = "유효기간"; ObjectID = "6Vk-kP-nS1"; */
+"6Vk-kP-nS1.text" = "유효기간";
+
+/* Class = "UILabel"; text = "OTP"; ObjectID = "6h2-s1-kv5"; */
+"6h2-s1-kv5.text" = "OTP";
+
+/* Class = "UILabel"; text = "신뢰할 수 없는 신분증이에요."; ObjectID = "6iH-Ep-pPy"; */
+"6iH-Ep-pPy.text" = "신뢰할 수 없는 신분증이에요.";
+
+/* Class = "UIButton"; normalTitle = "키패드"; ObjectID = "74C-cR-6uK"; */
+"74C-cR-6uK.normalTitle" = "키패드";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "8uk-1n-byS"; */
+"8uk-1n-byS.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "95r-Vn-2y6"; */
+"95r-Vn-2y6.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "등록하지 않으셨나요?"; ObjectID = "B8c-7e-6uK"; */
+"B8c-7e-6uK.normalTitle" = "등록하지 않으셨나요?";
+
+/* Class = "UILabel"; text = "나의 mid"; ObjectID = "BGp-tl-FUN"; */
+"BGp-tl-FUN.text" = "나의 mid";
+
+/* Class = "UILabel"; text = "OTP"; ObjectID = "BQi-30-R4g"; */
+"BQi-30-R4g.text" = "OTP";
+
+/* Class = "UITextField"; placeholder = "전화번호 입력"; ObjectID = "CXJ-04-tNL"; */
+"CXJ-04-tNL.placeholder" = "전화번호 입력";
+
+/* Class = "UIButton"; normalTitle = "다음"; ObjectID = "CmU-Dr-C37"; */
+"CmU-Dr-C37.normalTitle" = "다음";
+
+/* Class = "UIButton"; normalTitle = "동의 안함"; ObjectID = "D1Z-dY-cXe"; */
+"D1Z-dY-cXe.normalTitle" = "동의 안함";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Dl6-qK-Wa8"; */
+"Dl6-qK-Wa8.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "제출"; ObjectID = "EB0-TJ-tVe"; */
+"EB0-TJ-tVe.normalTitle" = "제출";
+
+/* Class = "UILabel"; text = "신분증 등록"; ObjectID = "GRj-HX-elB"; */
+"GRj-HX-elB.text" = "신분증 등록";
+
+/* Class = "UITextField"; placeholder = "통신사"; ObjectID = "HYC-xI-abg"; */
+"HYC-xI-abg.placeholder" = "통신사";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HjO-Ia-BIy"; */
+"HjO-Ia-BIy.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "검증실패"; ObjectID = "Hkn-Mo-6xf"; */
+"Hkn-Mo-6xf.text" = "검증실패";
+
+/* Class = "UIButton"; normalTitle = "돌아가기"; ObjectID = "HvK-me-ckT"; */
+"HvK-me-ckT.normalTitle" = "돌아가기";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "I40-Nh-Kg8"; */
+"I40-Nh-Kg8.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "비밀번호 입력(8자리 이상)"; ObjectID = "Izb-em-jIy"; */
+"Izb-em-jIy.placeholder" = "비밀번호 입력(8자리 이상)";
+
+/* Class = "UITextField"; placeholder = "비밀번호"; ObjectID = "JTy-H9-eFO"; */
+"JTy-H9-eFO.placeholder" = "비밀번호";
+
+/* Class = "UILabel"; text = "비밀번호를 입력하세요."; ObjectID = "KW6-Nk-YXf"; */
+"KW6-Nk-YXf.text" = "비밀번호를 입력하세요.";
+
+/* Class = "UILabel"; text = "요구자"; ObjectID = "KXe-6g-jaI"; */
+"KXe-6g-jaI.text" = "요구자";
+
+/* Class = "UILabel"; text = "계정정보"; ObjectID = "MLR-KC-WfP"; */
+"MLR-KC-WfP.text" = "계정정보";
+
+/* Class = "UILabel"; text = "● ● ● ● ● ●"; ObjectID = "OCE-l1-yam"; */
+"OCE-l1-yam.text" = "● ● ● ● ● ●";
+
+/* Class = "UILabel"; text = "약관동의"; ObjectID = "OFu-z4-2Y7"; */
+"OFu-z4-2Y7.text" = "약관동의";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Onp-zX-sRO"; */
+"Onp-zX-sRO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "계정정보"; ObjectID = "QTo-GY-k0Z"; */
+"QTo-GY-k0Z.text" = "계정정보";
+
+/* Class = "UIButton"; normalTitle = "모두 보기"; ObjectID = "Qub-pv-hht"; */
+"Qub-pv-hht.normalTitle" = "모두 보기";
+
+/* Class = "UILabel"; text = "모바일 신분증"; ObjectID = "RN7-yb-Znf"; */
+"RN7-yb-Znf.text" = "모바일 신분증";
+
+/* Class = "UIButton"; normalTitle = "다시시작"; ObjectID = "UYd-kC-pKC"; */
+"UYd-kC-pKC.normalTitle" = "다시시작";
+
+/* Class = "UILabel"; text = "약관동의"; ObjectID = "Ub4-qb-Mpc"; */
+"Ub4-qb-Mpc.text" = "약관동의";
+
+/* Class = "UILabel"; text = "계정정보"; ObjectID = "UeX-zF-em3"; */
+"UeX-zF-em3.text" = "계정정보";
+
+/* Class = "UITextField"; placeholder = "비밀번호"; ObjectID = "WFJ-GS-ONq"; */
+"WFJ-GS-ONq.placeholder" = "비밀번호";
+
+/* Class = "UILabel"; text = "신분증 등록"; ObjectID = "Xmk-WF-agD"; */
+"Xmk-WF-agD.text" = "신분증 등록";
+
+/* Class = "UIButton"; normalTitle = "비밀번호를 엊어버리셨나요?"; ObjectID = "XyJ-pT-bgl"; */
+"XyJ-pT-bgl.normalTitle" = "비밀번호를 엊어버리셨나요?";
+
+/* Class = "UITextField"; placeholder = "ID 또는 OTP"; ObjectID = "YKp-Uf-bt6"; */
+"YKp-Uf-bt6.placeholder" = "ID 또는 OTP";
+
+/* Class = "UILabel"; text = "신분증 등록"; ObjectID = "YZo-OT-9DZ"; */
+"YZo-OT-9DZ.text" = "신분증 등록";
+
+/* Class = "UITextField"; placeholder = "핸드폰 번호"; ObjectID = "ZKK-Hv-jeA"; */
+"ZKK-Hv-jeA.placeholder" = "핸드폰 번호";
+
+/* Class = "UITextField"; placeholder = "인증번호 입력"; ObjectID = "ZzT-Uk-5SI"; */
+"ZzT-Uk-5SI.placeholder" = "인증번호 입력";
+
+/* Class = "UIButton"; normalTitle = "개인정보 수집 이용"; ObjectID = "bjv-2i-Syp"; */
+"bjv-2i-Syp.normalTitle" = "개인정보 수집 이용";
+
+/* Class = "UIButton"; normalTitle = "지문으로 앱 로그인"; ObjectID = "dcd-oH-fEo"; */
+"dcd-oH-fEo.normalTitle" = "지문으로 앱 로그인";
+
+/* Class = "UIButton"; normalTitle = "내 ID QR코드 보기"; ObjectID = "eSa-dE-5iG"; */
+"eSa-dE-5iG.normalTitle" = "내 ID QR코드 보기";
+
+/* Class = "UILabel"; text = "계정 만들기"; ObjectID = "eg0-Qx-Vt7"; */
+"eg0-Qx-Vt7.text" = "계정 만들기";
+
+/* Class = "UITextField"; placeholder = "비밀번호 확인"; ObjectID = "fCj-ap-9ds"; */
+"fCj-ap-9ds.placeholder" = "비밀번호 확인";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gr3-cH-hGV"; */
+"gr3-cH-hGV.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "gvI-4C-AHo"; */
+"gvI-4C-AHo.text" = "ID";
+
+/* Class = "UILabel"; text = "계정 만들기"; ObjectID = "hi8-Ry-8JX"; */
+"hi8-Ry-8JX.text" = "계정 만들기";
+
+/* Class = "UILabel"; text = "약관동의"; ObjectID = "ibp-BD-f6q"; */
+"ibp-BD-f6q.text" = "약관동의";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "krp-Ud-WCR"; */
+"krp-Ud-WCR.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "신분증 사진은 신분 증명할 때 사용됩니다. 사진을 알아볼 수 없으면 신분증명이 안될 수 있습니다."; ObjectID = "l9h-69-Y9C"; */
+"l9h-69-Y9C.text" = "신분증 사진은 신분 증명할 때 사용됩니다. 사진을 알아볼 수 없으면 신분증명이 안될 수 있습니다.";
+
+/* Class = "UILabel"; text = "영역에 ID QR코드나 신분증에 기재된 QR코드를 스캔하세요. 올바르지 않을 경우 무시돼요."; ObjectID = "lIH-aN-yYv"; */
+"lIH-aN-yYv.text" = "영역에 ID QR코드나 신분증에 기재된 QR코드를 스캔하세요. 올바르지 않을 경우 무시돼요.";
+
+/* Class = "UIButton"; normalTitle = "스캔하기"; ObjectID = "qQ0-v0-7fi"; */
+"qQ0-v0-7fi.normalTitle" = "스캔하기";
+
+/* Class = "UILabel"; text = "신분증"; ObjectID = "sof-0K-Sgb"; */
+"sof-0K-Sgb.text" = "신분증";
+
+/* Class = "UILabel"; text = "계정 만들기"; ObjectID = "tT6-9U-5Hp"; */
+"tT6-9U-5Hp.text" = "계정 만들기";
+
+/* Class = "UIButton"; normalTitle = "취소"; ObjectID = "txX-OK-Chq"; */
+"txX-OK-Chq.normalTitle" = "취소";
+
+/* Class = "UIButton"; normalTitle = "돌아가기"; ObjectID = "whw-EE-jPG"; */
+"whw-EE-jPG.normalTitle" = "돌아가기";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xYX-6G-ZQb"; */
+"xYX-6G-ZQb.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xrh-m4-6eX"; */
+"xrh-m4-6eX.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "이용약관 동의"; ObjectID = "ycz-cw-TxJ"; */
+"ycz-cw-TxJ.normalTitle" = "이용약관 동의";
