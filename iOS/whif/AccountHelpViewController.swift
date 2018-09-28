@@ -3,6 +3,8 @@ import UIKit
 
 class AccountHelpViewController: UIViewController {
 
+    @IBOutlet weak var progressLoading: UIProgressView!
+    
     var network: Network?
     
     override func viewDidLoad() {
@@ -46,36 +48,33 @@ class AccountHelpViewController: UIViewController {
 extension AccountHelpViewController: NetworkDelegate {
     
     func networkBegined() {
-        DispatchQueue.main.async {
-            self.startLoading()
-        }
+        progressLoading.startLoading()
     }
     
     func networkEnded() {
-        DispatchQueue.main.async {
-            self.endLoading()
-        }
+        progressLoading.setLoading(0.8)
     }
     
     func networkError(result: Network.Result) {
-        let vc = self.presentingViewController as? MyLoginViewController
+        let vc = self.presentingViewController as? LoginViewController
         vc?.labelAlert.text = result.error.rawValue
         networkEnded()
+        progressLoading.endLoading()
     }
     
     func networkResponse(data: Data, mode: Network.responseMode) {
-        let vc = self.presentingViewController as? MyLoginViewController
         do {
             let withdrawalData = try JSONDecoder().decode(Network.withdrawalResponseData.self, from: data)
             if !withdrawalData.error {
                 FileIO("my", directory: "id").remove()
                 DispatchQueue.main.async {
-                    vc?.performSegue(withIdentifier: "SignUpSeg", sender: vc)
+                    self.dismiss(animated: false, completion: nil)
                 }
-                return
+            } else {
+                networkError(result: .failure(.withdrawal))
             }
         } catch {
-            vc?.labelAlert.autoFadeOut(Network.Result.Error.invalidJson.rawValue)
+            networkError(result: .failure(.invalidJson))
         }
     }
 }

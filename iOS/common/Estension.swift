@@ -295,6 +295,25 @@ extension UIView {
                       width: sizeViewIdRange.width * scale.width,
                       height: sizeViewIdRange.height * scale.height)
     }
+    
+    func addWaitingView(_ subview: UIView? = nil,
+                        backgroundColor: UIColor = UIColor.clear) {
+        let viewWaiting = UIView(frame: frame)
+        viewWaiting.restorationIdentifier = "Waiting"
+        viewWaiting.backgroundColor = backgroundColor
+        addSubview(viewWaiting)
+        if let subview = subview {
+            viewWaiting.addSubview(subview)
+        }
+    }
+    
+    func removeWaitingView() {
+        for sub in subviews {
+            if sub.restorationIdentifier == "Waiting" {
+                sub.removeFromSuperview()
+            }
+        }
+    }
 }
 
 
@@ -332,31 +351,49 @@ extension UIViewController {
         self.view.window!.layer.add(transition, forKey: kCATransition)
         self.present(viewControllerToPresent, animated: false)
     }
+}
+
+
+extension UIProgressView {
+    
+    func addOverlay() {
+        self.isHidden = false
+        guard let view = self.superview else { return }
+        view.addWaitingView()
+    }
+    
+    func removeOverlay() {
+        self.progress = 0.0
+        self.isHidden = true
+        guard let view = self.superview else { return }
+        view.removeWaitingView()
+    }
     
     func startLoading() {
-        let viewLoading = UIView(frame: view.frame)
-        let imageview = UIImageView(frame: CGRect(x: view.frame.width / 2 - 35,
-                                                  y: view.frame.height / 2 - 70,
-                                                  width: 70, height: 70))
-        let loadingImage = UIImage(gifName: "loading", levelOfIntegrity: 0.5)
-        
-        view.addSubview(viewLoading)
-        viewLoading.addSubview(imageview)
-        viewLoading.restorationIdentifier = "Loading"
-        viewLoading.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        
-        imageview.loopCount = -1
-        imageview.setGifImage(loadingImage)
-        imageview.startAnimating()
-        imageview.contentMode = .scaleAspectFit
+        DispatchQueue.main.async {
+            if self.progress == 0.0 || self.progress == 1.0 {
+                self.setProgress(0.1, animated: true)
+            }
+            self.addOverlay()
+        }
+    }
+    
+    func setLoading(_ value: Float) {
+        DispatchQueue.main.async {
+            var value = value + self.progress
+            if value >= 1.0 {
+                value = 1.0
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                    self.removeOverlay()
+                })
+            }
+            self.setProgress(value, animated: true)
+        }
     }
     
     func endLoading() {
-        for sub in view.subviews {
-            if sub.restorationIdentifier == "Loading" {
-                sub.removeFromSuperview()
-                break
-            }
+        DispatchQueue.main.async {
+            self.removeOverlay()
         }
     }
 }

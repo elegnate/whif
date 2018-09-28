@@ -6,7 +6,7 @@ target 'whif' do
    #pod 'SwiftSocket', '2.0.2'
    pod 'CryptoSwift' 
    #pod 'SwiftyRSA'
-   pod 'SwiftyGif'
+   #pod 'SwiftyGif'
 end
 
 post_install do |installer|

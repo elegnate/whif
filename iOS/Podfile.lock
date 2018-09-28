@@ -1,0 +1,18 @@
+PODS:
+  - CryptoSwift (0.12.0)
+  - SwiftyGif (4.1.0)
+  - TesseractOCRiOS (4.0.0)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - SwiftyGif
+  - TesseractOCRiOS
+
+SPEC CHECKSUMS:
+  CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
+  SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+
+PODFILE CHECKSUM: a7679a94e09d5dc2111d9732b2915dc61b710d92
+
+COCOAPODS: 1.4.0

@@ -16,19 +16,17 @@
 		4D40AD6C206BF1B600073556 /* public.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4D40AD6B206BF1B600073556 /* public.pem */; };
 		4D68C76E2141878C00705FE7 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68C76D2141878C00705FE7 /* SignUp2ViewController.swift */; };
 		4D68C770214188AC00705FE7 /* AccountHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68C76F214188AC00705FE7 /* AccountHelpViewController.swift */; };
-		4D8046A62141A0250014FC57 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4D8046A52141A0240014FC57 /* loading.gif */; };
-		4DA4D56920755DC100014082 /* MyProofViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D55F20755DC000014082 /* MyProofViewContoller.swift */; };
+		4DA4D56920755DC100014082 /* ProofViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D55F20755DC000014082 /* ProofViewContoller.swift */; };
 		4DA4D56C20755DC100014082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56220755DC000014082 /* ViewController.swift */; };
-		4DA4D56D20755DC100014082 /* MyOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56320755DC000014082 /* MyOTPViewController.swift */; };
-		4DA4D56E20755DC100014082 /* MyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56420755DC000014082 /* MyLoginViewController.swift */; };
+		4DA4D56D20755DC100014082 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56320755DC000014082 /* OTPViewController.swift */; };
+		4DA4D56E20755DC100014082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56420755DC000014082 /* LoginViewController.swift */; };
 		4DA4D56F20755DC100014082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56520755DC100014082 /* AppDelegate.swift */; };
-		4DA4D57020755DC100014082 /* MyRecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56620755DC100014082 /* MyRecogViewController.swift */; };
+		4DA4D57020755DC100014082 /* RecogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56620755DC100014082 /* RecogViewController.swift */; };
 		4DA4D57120755DC100014082 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4D56720755DC100014082 /* LaunchScreen.xib */; };
 		4DA4D57220755DC100014082 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4D56820755DC100014082 /* SignUpViewController.swift */; };
 		4DA4D57520755DD500014082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4D57320755DD500014082 /* Main.storyboard */; };
-		4DA8F5C120B7103D0037E458 /* MyBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8F5C020B7103D0037E458 /* MyBarcodeViewController.swift */; };
+		4DA8F5C120B7103D0037E458 /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8F5C020B7103D0037E458 /* BarcodeViewController.swift */; };
 		4DD6CD9C214BE0680078BCFF /* NanumGothic.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 4DD6CD9B214BE0630078BCFF /* NanumGothic.ttc */; };
-		4DDBEDA6215D52A100387A86 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBEDA5215D52A100387A86 /* BackgroundViewController.swift */; };
 		4DFE86C6215422370066ECB5 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE86B22154210F0066ECB5 /* OTP.swift */; };
 		4DFE86C7215422370066ECB5 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE86B32154210F0066ECB5 /* FileIO.swift */; };
 		4DFE86C8215422370066ECB5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE86B42154210F0066ECB5 /* Network.swift */; };
@@ -58,19 +56,17 @@
 		4D4B6C48207C9DF700A2220F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		4D68C76D2141878C00705FE7 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		4D68C76F214188AC00705FE7 /* AccountHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHelpViewController.swift; sourceTree = "<group>"; };
-		4D8046A52141A0240014FC57 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
-		4DA4D55F20755DC000014082 /* MyProofViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProofViewContoller.swift; sourceTree = "<group>"; };
+		4DA4D55F20755DC000014082 /* ProofViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProofViewContoller.swift; sourceTree = "<group>"; };
 		4DA4D56220755DC000014082 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4DA4D56320755DC000014082 /* MyOTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOTPViewController.swift; sourceTree = "<group>"; };
-		4DA4D56420755DC000014082 /* MyLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLoginViewController.swift; sourceTree = "<group>"; };
+		4DA4D56320755DC000014082 /* OTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4DA4D56420755DC000014082 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4DA4D56520755DC100014082 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DA4D56620755DC100014082 /* MyRecogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecogViewController.swift; sourceTree = "<group>"; };
+		4DA4D56620755DC100014082 /* RecogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecogViewController.swift; sourceTree = "<group>"; };
 		4DA4D56720755DC100014082 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4DA4D56820755DC100014082 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4DA4D57420755DD500014082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4DA8F5C020B7103D0037E458 /* MyBarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarcodeViewController.swift; sourceTree = "<group>"; };
+		4DA8F5C020B7103D0037E458 /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
 		4DD6CD9B214BE0630078BCFF /* NanumGothic.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.ttc; sourceTree = "<group>"; };
-		4DDBEDA5215D52A100387A86 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		4DFE86B22154210F0066ECB5 /* OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		4DFE86B32154210F0066ECB5 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
 		4DFE86B42154210F0066ECB5 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -172,21 +168,19 @@
 		7F132F301B9ED2C5001A542A /* whif */ = {
 			isa = PBXGroup;
 			children = (
-				4D8046A52141A0240014FC57 /* loading.gif */,
 				4DA4D56520755DC100014082 /* AppDelegate.swift */,
 				4DA4D57320755DD500014082 /* Main.storyboard */,
 				4DA4D56720755DC100014082 /* LaunchScreen.xib */,
-				4DDBEDA5215D52A100387A86 /* BackgroundViewController.swift */,
-				4DA4D56420755DC000014082 /* MyLoginViewController.swift */,
+				4DA4D56420755DC000014082 /* LoginViewController.swift */,
 				4DA4D56820755DC100014082 /* SignUpViewController.swift */,
 				4D0B9EDC21415E4D00359CE7 /* ScanViewController.swift */,
 				4D68C76D2141878C00705FE7 /* SignUp2ViewController.swift */,
 				4D68C76F214188AC00705FE7 /* AccountHelpViewController.swift */,
 				4DA4D56220755DC000014082 /* ViewController.swift */,
-				4DA4D55F20755DC000014082 /* MyProofViewContoller.swift */,
-				4DA4D56320755DC000014082 /* MyOTPViewController.swift */,
-				4DA4D56620755DC100014082 /* MyRecogViewController.swift */,
-				4DA8F5C020B7103D0037E458 /* MyBarcodeViewController.swift */,
+				4DA4D55F20755DC000014082 /* ProofViewContoller.swift */,
+				4DA4D56320755DC000014082 /* OTPViewController.swift */,
+				4DA4D56620755DC100014082 /* RecogViewController.swift */,
+				4DA8F5C020B7103D0037E458 /* BarcodeViewController.swift */,
 				4D40AD6B206BF1B600073556 /* public.pem */,
 				7F132F3A1B9ED2C5001A542A /* Images.xcassets */,
 				7F132F311B9ED2C5001A542A /* Supporting Files */,
@@ -291,7 +285,6 @@
 				4D3986FA2141269C00DA81B9 /* NanumSquareLight.ttf in Resources */,
 				4D3986FB2141269C00DA81B9 /* NanumSquareRegular.ttf in Resources */,
 				4DA4D57120755DC100014082 /* LaunchScreen.xib in Resources */,
-				4D8046A62141A0250014FC57 /* loading.gif in Resources */,
 				4D3986F92141269C00DA81B9 /* NanumSquareExtraBold.ttf in Resources */,
 				7F132F3B1B9ED2C5001A542A /* Images.xcassets in Resources */,
 			);
@@ -365,28 +358,27 @@
 				4DA4D56F20755DC100014082 /* AppDelegate.swift in Sources */,
 				4D68C76E2141878C00705FE7 /* SignUp2ViewController.swift in Sources */,
 				4DFE86C9215422370066ECB5 /* Estension.swift in Sources */,
-				4DA4D56920755DC100014082 /* MyProofViewContoller.swift in Sources */,
+				4DA4D56920755DC100014082 /* ProofViewContoller.swift in Sources */,
 				4DFE86C7215422370066ECB5 /* FileIO.swift in Sources */,
 				4DFE86D02154224D0066ECB5 /* Signature.swift in Sources */,
 				4DFE86CE2154224D0066ECB5 /* Message.swift in Sources */,
 				4DFE86C8215422370066ECB5 /* Network.swift in Sources */,
 				4DFE86D52154224D0066ECB5 /* SwiftyRSAError.swift in Sources */,
-				4DA4D56E20755DC100014082 /* MyLoginViewController.swift in Sources */,
+				4DA4D56E20755DC100014082 /* LoginViewController.swift in Sources */,
 				4DFE86C6215422370066ECB5 /* OTP.swift in Sources */,
 				4DFE86CD2154224D0066ECB5 /* ClearMessage.swift in Sources */,
 				4DFE86D32154224D0066ECB5 /* SwiftyRSA.swift in Sources */,
 				4DA4D57220755DC100014082 /* SignUpViewController.swift in Sources */,
 				4D68C770214188AC00705FE7 /* AccountHelpViewController.swift in Sources */,
 				4DA4D56C20755DC100014082 /* ViewController.swift in Sources */,
-				4DA4D56D20755DC100014082 /* MyOTPViewController.swift in Sources */,
+				4DA4D56D20755DC100014082 /* OTPViewController.swift in Sources */,
 				4DFE86D22154224D0066ECB5 /* Key.swift in Sources */,
 				4DFE86CF2154224D0066ECB5 /* Asn1Parser.swift in Sources */,
 				4DFE86CC2154224D0066ECB5 /* EncryptedMessage.swift in Sources */,
-				4DA8F5C120B7103D0037E458 /* MyBarcodeViewController.swift in Sources */,
-				4DA4D57020755DC100014082 /* MyRecogViewController.swift in Sources */,
+				4DA8F5C120B7103D0037E458 /* BarcodeViewController.swift in Sources */,
+				4DA4D57020755DC100014082 /* RecogViewController.swift in Sources */,
 				4DFE86CB2154224D0066ECB5 /* PublicKey.swift in Sources */,
 				4D0B9EDD21415E4D00359CE7 /* ScanViewController.swift in Sources */,
-				4DDBEDA6215D52A100387A86 /* BackgroundViewController.swift in Sources */,
 				4DFE86D42154224D0066ECB5 /* SwiftyRSA+ObjC.swift in Sources */,
 				4DFE86D12154224D0066ECB5 /* PrivateKey.swift in Sources */,
 			);

@@ -40,9 +40,14 @@ extension Network {
             case loadRSA         = "키를 불러오는 중 오류가 발생했습니다."
             case noPiece         = "기기에 저장된 신분증이 없습니다."
             case noBiometric     = "PIN으로 시도해주세요."
+            case biometric       = "생체 인증에 실패했습니다."
             case alreadyRegister = "이미 등록된 신분증이 있습니다."
             case generateRSAKey  = "키 생성에 실패했습니다."
             case verifySignature = "서명 검증에 실패했습니다."
+            case login           = "로그인 중 오류가 발생했습니다."
+            case noUser          = "회원가입 후 로그인 해주세요."
+            case identity        = "신분증 요청 중 오류가 발생했습니다."
+            case withdrawal      = "계정 삭제 중 오류가 발생했습니다."
         }
         case failure(Error)
         
@@ -89,6 +94,7 @@ class Network: NSObject {
     }
     
     func authentificationBiometric(mode: responseMode) -> Bool {
+        delegate?.networkBegined()
         let context = LAContext()
         var error: NSError?
         
@@ -104,18 +110,20 @@ class Network: NSObject {
             return false
         }
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "생체정보를 입력해주세요.") {
-            [] success, authenticationError in
+            [self] success, authenticationError in
             if success {
-                DispatchQueue.main.async {
-                    self.challenge(mode: mode, isBiometric: true)
-                }
+                self.challenge(mode: mode, isBiometric: true)
+            } else {
+                self.delegate?.networkError(result: .failure(.biometric))
             }
         }
         return true
     }
     
     func challenge(mode: responseMode, isBiometric: Bool = false) {
-        delegate?.networkBegined()
+        if !isBiometric {
+            delegate?.networkBegined()
+        }
         let jsonData = challengeRequestData(mode: mode.rawValue, did: uuid, isBiometric: isBiometric)
         guard let requestData = try? JSONEncoder().encode(jsonData) else {
             delegate?.networkError(result: .failure(.invalidJson))

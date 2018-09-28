@@ -23,10 +23,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--My Recog View Controller-->
+        <!--Recog View Controller-->
         <scene sceneID="R32-CW-udH">
             <objects>
-                <viewController storyboardIdentifier="RecogNumber" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dd-Nz-tQx" customClass="MyRecogViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecogNumber" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dd-Nz-tQx" customClass="RecogViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BKd-nG-igK"/>
                         <viewControllerLayoutGuide type="bottom" id="ZIP-AA-8vj"/>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아래 영역안에 바코드를 비취주세요. (자동인식)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-6j-69N">
-                                        <rect key="frame" x="96" y="192.5" width="183.5" height="30.5"/>
+                                        <rect key="frame" x="92.5" y="194" width="190" height="29"/>
                                         <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -574,11 +574,21 @@
                                     <constraint firstAttribute="trailing" secondItem="Rlz-le-eeH" secondAttribute="trailing" constant="15" id="urO-wN-69j"/>
                                 </constraints>
                             </view>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-og-rVP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1.5"/>
+                                <color key="tintColor" red="0.3294117647" green="0.3921568627" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="yjk-tV-WNq"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.3294117647" green="0.3921568627" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="epN-WB-vhb" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="800" id="2dH-84-uO9"/>
                             <constraint firstItem="zNo-ho-upe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Xf-77-JP5"/>
+                            <constraint firstItem="hpG-og-rVP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AqX-O8-vMj"/>
                             <constraint firstItem="wbL-dQ-QQK" firstAttribute="top" secondItem="tKc-vT-cGv" secondAttribute="top" id="Bc1-TS-aIP"/>
                             <constraint firstItem="wbL-dQ-QQK" firstAttribute="trailing" secondItem="tKc-vT-cGv" secondAttribute="trailing" id="CTZ-P2-eM5"/>
                             <constraint firstItem="DRL-Iw-ppU" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" id="GT2-8o-yeP"/>
@@ -591,6 +601,7 @@
                             <constraint firstItem="ag1-Kw-FFw" firstAttribute="centerX" secondItem="G2A-B1-AWr" secondAttribute="centerX" id="TeW-1b-eH8"/>
                             <constraint firstAttribute="trailing" secondItem="G2A-B1-AWr" secondAttribute="trailing" constant="15" id="TyJ-6C-EXk"/>
                             <constraint firstItem="tKc-vT-cGv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Xv5-ds-LH2"/>
+                            <constraint firstItem="hpG-og-rVP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZVw-Z1-IBK"/>
                             <constraint firstItem="wbL-dQ-QQK" firstAttribute="leading" secondItem="tKc-vT-cGv" secondAttribute="leading" id="cle-fm-uk7"/>
                             <constraint firstItem="ag1-Kw-FFw" firstAttribute="top" secondItem="wbL-dQ-QQK" secondAttribute="bottom" constant="5" id="dqV-Ne-eyF"/>
                             <constraint firstItem="epN-WB-vhb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="goQ-0X-uBR"/>
@@ -602,6 +613,7 @@
                             <constraint firstItem="DRL-Iw-ppU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sIZ-Xy-dyp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zNo-ho-upe" secondAttribute="bottom" constant="-50" id="tme-dV-1FL"/>
                             <constraint firstAttribute="trailing" secondItem="tKc-vT-cGv" secondAttribute="trailing" constant="15" id="wFn-qJ-IXr"/>
+                            <constraint firstAttribute="trailing" secondItem="hpG-og-rVP" secondAttribute="trailing" id="wIN-o3-rnb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="view:8bC-Xf-vdC:value"/>
@@ -619,6 +631,7 @@
                         <outlet property="labelMyBirth" destination="vwz-Ik-7cQ" id="2Kj-73-alN"/>
                         <outlet property="labelMyName" destination="21c-AB-dS8" id="e2j-bc-4Bp"/>
                         <outlet property="labelMyReg" destination="Jvg-8J-0BJ" id="cP5-1n-GLb"/>
+                        <outlet property="progressLoading" destination="hpG-og-rVP" id="Mre-CW-N36"/>
                         <outlet property="textfieldProof" destination="UkV-Jd-6hc" id="KcF-XT-hUe"/>
                         <outlet property="viewInput" destination="G2A-B1-AWr" id="ApB-TL-Swz"/>
                         <outlet property="viewKeyboardToolbar" destination="zNo-ho-upe" id="zO7-bp-aiQ"/>
@@ -627,17 +640,16 @@
                         <segue destination="fOv-iH-w8G" kind="presentation" identifier="ProofSeg" modalTransitionStyle="crossDissolve" id="jaz-oI-fjj"/>
                         <segue destination="2dd-Nz-tQx" kind="presentation" identifier="Recog" modalTransitionStyle="crossDissolve" id="FkF-uW-cGm"/>
                         <segue destination="fS6-Wr-epF" kind="presentation" identifier="Barcode" modalTransitionStyle="crossDissolve" id="bj8-8n-SmF"/>
-                        <segue destination="8yE-Sa-tLU" kind="presentation" identifier="BackgroundSeg" animates="NO" id="fPC-hX-Ei3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="206" y="-1128"/>
         </scene>
-        <!--My Barcode View Controller-->
+        <!--Barcode View Controller-->
         <scene sceneID="uIX-SC-e9n">
             <objects>
-                <viewController storyboardIdentifier="Barcode" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fS6-Wr-epF" customClass="MyBarcodeViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Barcode" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fS6-Wr-epF" customClass="BarcodeViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="buq-0j-jeN"/>
                         <viewControllerLayoutGuide type="bottom" id="LRc-ez-24B"/>
@@ -695,10 +707,10 @@
             </objects>
             <point key="canvasLocation" x="1780" y="-1853"/>
         </scene>
-        <!--MyOTP View Controller-->
+        <!--View Controller-->
         <scene sceneID="dwI-Pe-GqY">
             <objects>
-                <viewController storyboardIdentifier="OTP" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rcT-xI-VQb" customClass="MyOTPViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OTP" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rcT-xI-VQb" customClass="OTPViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TW6-Bm-y9d"/>
                         <viewControllerLayoutGuide type="bottom" id="r9S-e3-y3F"/>
@@ -897,10 +909,10 @@
             </objects>
             <point key="canvasLocation" x="990" y="-1128"/>
         </scene>
-        <!--My Proof View Controller-->
+        <!--Proof View Controller-->
         <scene sceneID="z8V-bn-at1">
             <objects>
-                <viewController storyboardIdentifier="Proof" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fOv-iH-w8G" customClass="MyProofViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Proof" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fOv-iH-w8G" customClass="ProofViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TNC-FT-PoZ"/>
                         <viewControllerLayoutGuide type="bottom" id="gXh-S1-0ZO"/>
@@ -1133,41 +1145,10 @@
             </objects>
             <point key="canvasLocation" x="989.60000000000002" y="-1853.5232383808097"/>
         </scene>
-        <!--Background View Controller-->
-        <scene sceneID="Tmj-dp-T3c">
-            <objects>
-                <viewController id="8yE-Sa-tLU" customClass="BackgroundViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lT4-s3-0UA"/>
-                        <viewControllerLayoutGuide type="bottom" id="v3d-je-5Pp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BbE-iK-ZIb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whif" translatesAutoresizingMaskIntoConstraints="NO" id="MfX-aX-0V4">
-                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="5f5-g7-RmL"/>
-                                    <constraint firstAttribute="width" secondItem="MfX-aX-0V4" secondAttribute="height" multiplier="1:1" id="AP1-HA-uA4"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="MfX-aX-0V4" firstAttribute="centerY" secondItem="BbE-iK-ZIb" secondAttribute="centerY" id="6w2-BM-nFm"/>
-                            <constraint firstItem="MfX-aX-0V4" firstAttribute="centerX" secondItem="BbE-iK-ZIb" secondAttribute="centerX" id="yWS-av-UUY"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4TV-kv-yWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-580" y="-1854"/>
-        </scene>
-        <!--My Login View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="MAd-Rb-PeH">
             <objects>
-                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XO2-QK-F3K" customClass="MyLoginViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XO2-QK-F3K" customClass="LoginViewController" customModule="whif" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ap-HI-kiS"/>
                         <viewControllerLayoutGuide type="bottom" id="r3z-7Y-5Tm"/>
@@ -1622,6 +1603,15 @@
                                     <constraint firstAttribute="height" constant="15" id="YD9-3H-vRh"/>
                                 </constraints>
                             </stackView>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-3N-CwM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="gDb-V9-h74"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1634,9 +1624,12 @@
                             <constraint firstItem="pdA-ZM-ASC" firstAttribute="centerX" secondItem="TrJ-Db-OCD" secondAttribute="centerX" id="Lfu-pg-YMc"/>
                             <constraint firstItem="DLS-zr-p1i" firstAttribute="leading" secondItem="TrJ-Db-OCD" secondAttribute="leading" id="MQf-ZF-Opf"/>
                             <constraint firstItem="0fq-PR-GdF" firstAttribute="centerX" secondItem="DLS-zr-p1i" secondAttribute="centerX" id="Una-hK-RlA"/>
+                            <constraint firstItem="TfX-3N-CwM" firstAttribute="leading" secondItem="TrJ-Db-OCD" secondAttribute="leading" id="VM8-sw-vaM"/>
                             <constraint firstItem="DLS-zr-p1i" firstAttribute="top" secondItem="0fq-PR-GdF" secondAttribute="bottom" id="fit-be-wNg"/>
                             <constraint firstItem="ni8-mL-T53" firstAttribute="centerX" secondItem="TrJ-Db-OCD" secondAttribute="centerX" id="i1X-pk-2Lk"/>
+                            <constraint firstAttribute="trailing" secondItem="TfX-3N-CwM" secondAttribute="trailing" id="nGP-Tm-0BI"/>
                             <constraint firstItem="xVr-mi-XVC" firstAttribute="leading" secondItem="1PT-mO-ip7" secondAttribute="leading" constant="47.5" id="rAq-Sg-8Nz"/>
+                            <constraint firstItem="TfX-3N-CwM" firstAttribute="top" secondItem="1ap-HI-kiS" secondAttribute="bottom" id="tRj-Ub-cgT"/>
                             <constraint firstAttribute="bottom" secondItem="DLS-zr-p1i" secondAttribute="bottom" id="x0W-Fr-egd"/>
                             <constraint firstItem="ni8-mL-T53" firstAttribute="top" secondItem="1ap-HI-kiS" secondAttribute="bottom" id="xLB-OZ-T6o"/>
                         </constraints>
@@ -1644,6 +1637,7 @@
                     <navigationItem key="navigationItem" id="JKG-gb-Lfe"/>
                     <connections>
                         <outlet property="labelAlert" destination="ni8-mL-T53" id="dLk-Po-ZxN"/>
+                        <outlet property="progressLoading" destination="TfX-3N-CwM" id="S0N-Kf-VHp"/>
                         <outlet property="stackviewNumber" destination="1PT-mO-ip7" id="eqf-ir-YQY"/>
                         <outlet property="stackviewPasscode" destination="xVr-mi-XVC" id="9dA-1e-bla"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginSeg" modalTransitionStyle="crossDissolve" id="UGU-Fs-jzc"/>
@@ -2273,7 +2267,7 @@
                                                         <inset key="imageEdgeInsets" minX="10" minY="13.5" maxX="10" maxY="14"/>
                                                         <state key="normal" image="refreshw"/>
                                                         <connections>
-                                                            <action selector="pressPhoneReset:" destination="bmK-CE-Pje" eventType="touchUpInside" id="DeP-m1-ALK"/>
+                                                            <action selector="pressPhoneReset:" destination="SMJ-DM-QeK" eventType="touchUpInside" id="Kf0-Ga-47A"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2441,6 +2435,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-GS-Iot">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="70n-Tc-RXo"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2455,12 +2458,14 @@
                             <constraint firstItem="pHa-TX-BWV" firstAttribute="leading" secondItem="xhc-KA-81f" secondAttribute="leading" id="RrW-2y-yqy"/>
                             <constraint firstItem="ZlK-yO-Vgg" firstAttribute="top" secondItem="9aL-Fi-Bbm" secondAttribute="bottom" constant="-1" id="Sqt-5q-VxD"/>
                             <constraint firstItem="9aL-Fi-Bbm" firstAttribute="leading" secondItem="DQK-wk-AXs" secondAttribute="centerX" id="Uuv-Ph-2CN"/>
+                            <constraint firstItem="R8J-GS-Iot" firstAttribute="leading" secondItem="xhc-KA-81f" secondAttribute="leading" id="VYz-BQ-4hN"/>
                             <constraint firstItem="DQK-wk-AXs" firstAttribute="top" secondItem="nIo-B7-Gvq" secondAttribute="bottom" constant="10" id="VmI-lZ-3eR"/>
                             <constraint firstItem="ZlK-yO-Vgg" firstAttribute="top" secondItem="zQd-Pj-l7T" secondAttribute="top" id="VoK-h1-tCP"/>
                             <constraint firstItem="9aL-Fi-Bbm" firstAttribute="trailing" secondItem="ZlK-yO-Vgg" secondAttribute="trailing" id="XaW-06-Lrg"/>
                             <constraint firstItem="zQd-Pj-l7T" firstAttribute="top" secondItem="e4D-gK-cbo" secondAttribute="bottom" id="bfE-Jy-uVD"/>
                             <constraint firstItem="e4D-gK-cbo" firstAttribute="leading" secondItem="DQK-wk-AXs" secondAttribute="leading" id="dIL-AB-NpJ"/>
                             <constraint firstItem="e4D-gK-cbo" firstAttribute="trailing" secondItem="zQd-Pj-l7T" secondAttribute="trailing" id="dfS-3J-QrA"/>
+                            <constraint firstItem="R8J-GS-Iot" firstAttribute="top" secondItem="oN8-Gi-pdz" secondAttribute="bottom" id="eCK-SZ-ODH"/>
                             <constraint firstItem="CIX-yn-4cL" firstAttribute="leading" secondItem="xhc-KA-81f" secondAttribute="leading" constant="10" id="fLR-Sj-T01"/>
                             <constraint firstItem="Sa5-nc-idt" firstAttribute="width" secondItem="Sa5-nc-idt" secondAttribute="height" multiplier="1:1" id="hhr-LT-kIY"/>
                             <constraint firstItem="e4D-gK-cbo" firstAttribute="top" secondItem="Sa5-nc-idt" secondAttribute="bottom" constant="20" id="l5C-61-9u8"/>
@@ -2470,6 +2475,7 @@
                             <constraint firstAttribute="trailing" secondItem="DQK-wk-AXs" secondAttribute="trailing" constant="40" id="tCF-53-EOT"/>
                             <constraint firstItem="wKH-Yq-IJ4" firstAttribute="top" secondItem="DQK-wk-AXs" secondAttribute="bottom" constant="10" id="tix-MI-tcY"/>
                             <constraint firstItem="nIo-B7-Gvq" firstAttribute="trailing" secondItem="DQK-wk-AXs" secondAttribute="trailing" id="uZt-lo-h7Z"/>
+                            <constraint firstAttribute="trailing" secondItem="R8J-GS-Iot" secondAttribute="trailing" id="xdj-YJ-AOY"/>
                             <constraint firstItem="e4D-gK-cbo" firstAttribute="leading" secondItem="zQd-Pj-l7T" secondAttribute="leading" id="xef-C3-BhL"/>
                             <constraint firstItem="wKH-Yq-IJ4" firstAttribute="centerX" secondItem="Nhe-U5-4U5" secondAttribute="centerX" id="ysU-Ni-QF0"/>
                         </constraints>
@@ -2477,6 +2483,7 @@
                     <connections>
                         <outlet property="constraintImageviewTop" destination="lrM-92-lDr" id="yC1-7A-Zbn"/>
                         <outlet property="labelAlert" destination="wKH-Yq-IJ4" id="6OE-cT-UJ5"/>
+                        <outlet property="progressLoading" destination="R8J-GS-Iot" id="APO-Ul-V6Y"/>
                         <outlet property="textfieldAuthNumber" destination="PQI-f4-RTm" id="Haa-g7-tDC"/>
                         <outlet property="textfieldPhone" destination="ccd-rO-mmw" id="aJB-82-ccq"/>
                         <outlet property="viewPhoneCheck" destination="16n-X9-CAj" id="91R-7W-kjp"/>
@@ -2563,7 +2570,7 @@
                                     <constraint firstAttribute="height" constant="50" id="G1j-Ow-70Z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="17"/>
-                                <state key="normal" title="파기 후 재등록하기">
+                                <state key="normal" title="등록된 신분증 파기하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2621,12 +2628,23 @@
                                     <action selector="pressExit:" destination="r9A-ee-6qI" eventType="touchUpInside" id="M29-jh-r9G"/>
                                 </connections>
                             </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r6V-6B-MBn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="2Pr-f6-QD2"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="r6V-6B-MBn" firstAttribute="top" secondItem="oYW-rw-dPk" secondAttribute="bottom" id="3S3-Rc-FLI"/>
                             <constraint firstAttribute="trailing" secondItem="b2v-36-qTq" secondAttribute="trailing" id="7oW-jm-jSA"/>
                             <constraint firstItem="RE9-fd-eAV" firstAttribute="top" secondItem="oYW-rw-dPk" secondAttribute="bottom" constant="50" id="KYG-Qk-dJk"/>
                             <constraint firstItem="RE9-fd-eAV" firstAttribute="centerX" secondItem="Xgm-GD-rQm" secondAttribute="centerX" id="Uk6-Te-2k0"/>
+                            <constraint firstAttribute="trailing" secondItem="r6V-6B-MBn" secondAttribute="trailing" id="VfF-IP-asq"/>
                             <constraint firstAttribute="trailing" secondItem="V4C-tk-Adr" secondAttribute="trailing" constant="40" id="Yfq-n1-in5"/>
                             <constraint firstItem="V4C-tk-Adr" firstAttribute="top" secondItem="r1n-T6-Qia" secondAttribute="bottom" constant="20" id="bh9-hr-eZP"/>
                             <constraint firstItem="b2v-36-qTq" firstAttribute="leading" secondItem="Xgm-GD-rQm" secondAttribute="leading" id="caS-Z4-tP1"/>
@@ -2635,8 +2653,12 @@
                             <constraint firstItem="r1n-T6-Qia" firstAttribute="top" secondItem="RE9-fd-eAV" secondAttribute="bottom" constant="20" id="wbS-fy-TSH"/>
                             <constraint firstItem="V4C-tk-Adr" firstAttribute="leading" secondItem="Xgm-GD-rQm" secondAttribute="leading" constant="40" id="xOB-El-lyC"/>
                             <constraint firstItem="xIy-iA-Df3" firstAttribute="top" secondItem="b2v-36-qTq" secondAttribute="bottom" id="yVE-cl-bYV"/>
+                            <constraint firstItem="r6V-6B-MBn" firstAttribute="leading" secondItem="Xgm-GD-rQm" secondAttribute="leading" id="zre-lI-GNA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressLoading" destination="r6V-6B-MBn" id="0Qb-mV-rkS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXj-dO-Qa2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30608,10 +30630,9 @@ lEwAGZROABmUUwAZlGEAGZRlABmUbAAZlHEAGZR+ABmUgQAZlI4AGZSTABmUmwAZlJ4AGZSjABmUqwAZ
 lK4AGZTAABmUwwAZlMgAAAAAAAAEAQAAAAAAAABWAAAAAAAAAAAAAAAAABmUyg
 </mutableData>
         </image>
-        <image name="whif" width="294" height="296"/>
         <image name="x" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bj8-8n-SmF"/>
+        <segue reference="Stk-c4-kxF"/>
     </inferredMetricsTieBreakers>
 </document>

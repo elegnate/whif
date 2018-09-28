@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textfieldProof: UITextField!
     @IBOutlet weak var labelAlert: UILabel!
     @IBOutlet weak var viewKeyboardToolbar: UIView!
+    @IBOutlet weak var progressLoading: UIProgressView!
     
     @IBOutlet weak var constraintBottomKeyboardToolbar: NSLayoutConstraint!
     
@@ -108,8 +109,11 @@ class ViewController: UIViewController {
     
     @objc func appMovedToBackground() {
         if !isRunningBiometricAuthentication {
+            let imageview = UIImageView(frame: CGRect(x: view.frame.width / 2 - 50, y: view.frame.height / 2 - 60,
+                                                      width: 100, height: 100))
+            imageview.image = #imageLiteral(resourceName: "whif")
+            view.addWaitingView(imageview, backgroundColor: UIColor.white)
             presentedViewController?.dismiss(animated: false, completion: nil)
-            performSegue(withIdentifier: "BackgroundSeg", sender: self)
             sessionTimestamp = Date().timestamp + 60 * 5
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
         }
@@ -117,7 +121,7 @@ class ViewController: UIViewController {
     
     @objc func appMovedToForeground() {
         if !isRunningBiometricAuthentication {
-            dismiss(animated: false, completion: nil)
+            view.removeWaitingView()
             if let timer = timer {
                 if timer.isValid {
                     timer.invalidate()
@@ -249,18 +253,18 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Recog" {
-            let vc = segue.destination as! MyRecogViewController
+            let vc = segue.destination as! RecogViewController
             vc.loginData = loginData
         } else if segue.identifier == "ProofSeg" {
-            let vc = segue.destination as! MyProofViewController
+            let vc = segue.destination as! ProofViewController
             vc.identityData = identityData
             vc.loginData    = loginData
         } else if segue.identifier == "Verify" {
-            let vc = segue.destination as! MyOTPViewController
+            let vc = segue.destination as! OTPViewController
             vc.loginData = loginData
             vc.otpCode   = textfieldProof.text
         } else if segue.identifier == "Barcode" {
-            let vc = segue.destination as! MyBarcodeViewController
+            let vc = segue.destination as! BarcodeViewController
             vc.txtBarcode   = loginData?.phone
             vc.imageBarcode = imageviewBarcode.image
         }
@@ -271,20 +275,17 @@ class ViewController: UIViewController {
 extension ViewController: NetworkDelegate {
     
     func networkBegined() {
-        DispatchQueue.main.async {
-            self.startLoading()
-        }
+        progressLoading.startLoading()
     }
     
     func networkEnded() {
-        DispatchQueue.main.async {
-            self.endLoading()
-        }
+        progressLoading.setLoading(0.5)
     }
     
     func networkError(result: Network.Result) {
         labelAlert.autoFadeOut(result.error.rawValue)
         networkEnded()
+        progressLoading.endLoading()
     }
     
     func networkResponse(data: Data, mode: Network.responseMode) {
@@ -308,23 +309,21 @@ extension ViewController: NetworkDelegate {
                         }
                     }
                 } else {
-                    labelAlert.autoFadeOut("신분증을 불러오지 못했습니다. \(identityData?.message ?? "")")
+                    networkError(result: .failure(.identity))
                 }
             } else if mode == .withdrawal {
                 let withdrawalData = try JSONDecoder().decode(Network.withdrawalResponseData.self, from: data)
                 if !withdrawalData.error {
                     DispatchQueue.main.async {
-                        let vc = self.presentingViewController as? MyLoginViewController
-                        self.dismiss(animated: true, completion: nil)
-                        vc?.labelAlert.autoFadeOut("계정 삭제에 성공했습니다.")
+                        self.presentingViewController?.dismiss(animated: true, completion: nil)
                     }
                     FileIO("my", directory: "id").remove()
                 } else {
-                    labelAlert.autoFadeOut("계정 삭제에 실패했습니다. \(withdrawalData.message)")
+                    networkError(result: .failure(.withdrawal))
                 }
             }
         } catch {
-            labelAlert.autoFadeOut(Network.Result.Error.invalidJson.rawValue)
+            networkError(result: .failure(.invalidJson))
         }
     }
 }

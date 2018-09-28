@@ -15,6 +15,7 @@ class SignUp2ViewController: UIViewController {
     @IBOutlet weak var textfieldPhone: UITextField!
     @IBOutlet weak var textfieldAuthNumber: UITextField!
     @IBOutlet weak var labelAlert: UILabel!
+    @IBOutlet weak var progressLoading: UIProgressView!
     
     @IBOutlet weak var constraintImageviewTop: NSLayoutConstraint!
     
@@ -82,6 +83,10 @@ class SignUp2ViewController: UIViewController {
     }
     
     @IBAction func editingAuthNumber(_ sender: Any) {
+        let count = textfieldAuthNumber.text?.count
+        if count! >= 6 {
+            dismissKeyboard()
+        }
     }
     
     @IBAction func pressSignUp(_ sender: Any) {
@@ -93,6 +98,11 @@ class SignUp2ViewController: UIViewController {
             let phonenumber = textfieldPhone.text!.replace(of: "+82", with: "0").replace(of: " ", with: "")
             network?.register(phone: phonenumber, name: signUpData.name, id: signUpData.id, image: signUpData.image, password: signUpData.pin)
         }
+    }
+    
+    @IBAction func pressPhoneReset(_ sender: Any) {
+        textfieldPhone.text = ""
+        viewPhoneCheck.isHidden = true
     }
     
     @IBAction func pressExit(_ sender: Any) {
@@ -117,29 +127,26 @@ class SignUp2ViewController: UIViewController {
 extension SignUp2ViewController: NetworkDelegate {
     
     func networkBegined() {
-        DispatchQueue.main.async {
-            self.startLoading()
-        }
+        progressLoading.startLoading()
     }
     
     func networkEnded() {
-        DispatchQueue.main.async {
-            self.endLoading()
-        }
+        progressLoading.setLoading(0.8)
     }
     
     func networkError(result: Network.Result) {
         labelAlert.autoFadeOut(result.error.rawValue)
         networkEnded()
+        progressLoading.endLoading()
     }
     
     func networkResponse(data: Data, mode: Network.responseMode) {
         do {
             let registerData = try JSONDecoder().decode(Network.registerResponseData.self, from: data)
             if !registerData.error {
-                let vc = self.presentingViewController?.presentingViewController as! MyLoginViewController
+                let vc = self.presentingViewController?.presentingViewController as! LoginViewController
                 DispatchQueue.main.async {
-                    vc.dismiss(animated: true, completion: nil)
+                    vc.dismiss(animated: false, completion: nil)
                 }
                 if registerData.piece != "" {
                     if FileIO("my", directory: "id").write(registerData.piece) {
