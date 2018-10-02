@@ -30,15 +30,19 @@ $ sudo apt-get update
 $ sudo apt-get install nginx
 $ sudo apt-get install php7.2-fpm, php7.2-mysql
 $ sudo apt-get install mysql-server
-$ sudo vi /etc/php/7.2/fpm/php.ini
+$ sudo nano /etc/mysql/my.cnf
+```
+**my.cnf** 파일을 **/etc/mysql/my.cnf** 에 복사하세요.
+```
+$ sudo nano /etc/php/7.2/fpm/php.ini
 ```
 ``` cgi .fix_pathinfo``` 부분을 찾아서 ```;``` 주석을 제거한 후 ``` cgi .fix_pathinfo=0``` 으로 설정합니다. 실행할 PHP파일이 없을 때 근접 파일 실행을 차단합니다.
 
 
 ### 2. 방화벽 설정
 ```
-$ sudo -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
-$ sudo -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
+$ sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+$ sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
 ```
 
 
