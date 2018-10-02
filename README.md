@@ -16,18 +16,40 @@ terminal로 프로젝트 폴더로 이동한 후 ```pod install```
 
 
 ## Server build
-**[Ubuntu 18.04]** **[Nginx 1.14]** **[PHP7.2 fpm]** **[PHP Slim 3.0]**  
+**[Ubuntu 18.04]** **[Nginx 1.14]** **[PHP7.2 fpm]** **[PHP Slim 3.0]** **[MySQL5.7]**  
 
 
-#### 1. certbot 설치
+#### 0. apt-get update
+```
+$ sudo apt-get update
+```
+
+
+#### 1. Nginx, PHP-fpm, MySQL install & setting
+```
+$ sudo apt-get install nginx
+$ sudo apt-get install php7.2-fpm, php7.2-mysql
+$ sudo apt-get install mysql-server
+$ sudo vi /etc/php/7.2/fpm/php.ini
+```
+``` cgi .fix_pathinfo``` 부분을 찾아서 ```;``` 주석을 제거한 후 ``` cgi .fix_pathinfo=0``` 으로 설정합니다. 실행할 PHP파일이 없을 때 근접 파일 실행을 차단합니다.
+
+
+### 2. 방화벽 설정
+```
+$ sudo -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+$ sudo -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
+```
+
+
+#### 3. certbot 설치
 ```
 $ add-apt-repository ppa:certbot/certbot
-$ apt-get update
 $ apt-get install python-certbot-nginx
 ```  
 
 
-#### 2. Nginx 설정
+#### 4. Nginx 설정
 ```
 $ sudo nano /etc/nginx/sites-available/[domain name]
 $ sudo ln -s /etc/nginx/sites-enable /etc/nginx/sites-available/[domain name]
@@ -36,15 +58,15 @@ $ sudo ln -s /etc/nginx/sites-enable /etc/nginx/sites-available/[domain name]
 **nginx-site-available** 파일에 모든 **[domain name]** 을 수정해야 합니다.
 
 
-#### 3. SSL 인증서 생성
+#### 5. SSL 인증서 생성
 ```
 $ sudo certbot --nginx -d [domain name] -d www.[domain name]
 $ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```  
-자세한 내용은 [Nginx Let's Encrypt](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04)에서 확인할 수 있습니다.
+자세한 내용은 [Nginx Let's Encrypt](https://varins.com/home-server-07-lets-encrypt-wildcard-certificates/)에서 확인할 수 있습니다.
 
 
-#### 4. Nginx 시동
+#### 6. Nginx 시동
 ```
 $ sudo nginx -t
 $ sudo systemctl restart nginx
